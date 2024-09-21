@@ -1,4 +1,4 @@
-.container {
+/* .container {
   @apply absolute left-1/2 top-5 px-3 py-2 flex rounded border border-gray-400;
   transform: translateX(-50%);
   box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
@@ -14,4 +14,67 @@
 
 .toolItem.active {
   @apply bg-blue-200 text-gray-700 rounded;
+} */
+
+/* Toolbar for desktop and larger screens */
+.container {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
+  transform: translateX(-50%);
+}
+
+.toolItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  padding: 12px;
+  color: black;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.toolItem:last-child {
+  margin-right: 0;
+}
+
+.toolItem:hover {
+  background-color: #e6f7ff;
+  color: #555;
+  border-radius: 6px;
+}
+
+.toolItem.active {
+  background-color: #b3d9ff;
+  color: #555;
+  border-radius: 6px;
+}
+
+/* Toolbar responsive for mobile */
+@media (max-width: 768px) {
+  .container {
+    bottom: 0;
+    top: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transform: none;
+    justify-content: space-around;
+  }
+
+  .toolItem {
+    font-size: 1rem;
+    margin-right: 0;
+    padding: 8px;
+  }
 }
