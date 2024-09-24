@@ -1,54 +1,3 @@
-/* .container {
-  @apply absolute top-1/2 left-5 text-sm border border-gray-400;
-  transform: translateY(-50%);
-  box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.selectOptionContainer {
-  @apply mb-6 last:mb-0 first:pt-5 last:pb-5 px-4;
-}
-
-.toolBoxLabel {
-  @apply block mb-1;
-}
-
-.colorsContainer {
-  @apply flex flex-wrap items-center;
-}
-
-.colorBox {
-  @apply inline-block w-5 h-5 rounded mr-1 last:mr-0;
-}
-
-.noFillColorBox {
-  background: linear-gradient(
-      to top left,
-      rgba(255, 0, 0, 0) 0%,
-      rgba(255, 0, 0, 0) calc(50% - 0.8px),
-      rgba(255, 0, 0, 1) 50%,
-      rgba(255, 0, 0, 0) calc(50% + 0.8px),
-      rgba(255, 0, 0, 0) 100%
-    ),
-    linear-gradient(
-      to top right,
-      rgba(255, 0, 0, 0) 0%,
-      rgba(255, 0, 0, 0) calc(50% - 0.8px),
-      rgba(255, 0, 0, 1) 50%,
-      rgba(255, 0, 0, 0) calc(50% + 0.8px),
-      rgba(255, 0, 0, 0) 100%
-    );
-}
-
-.activeColorBox {
-  @apply border border-gray-300;
-  box-shadow: 0 0 0 1px #4a47b1;
-}
-
-.colorPicker {
-  @apply mr-5 w-10 h-10 rounded border-2 border-neutral-400;
-} */
-
-/* Toolbox for desktop and larger screens */
 .container {
   position: absolute;
   top: 50%;
@@ -58,6 +7,7 @@
   transform: translateY(-50%);
   box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
   padding: 10px;
+  width: auto;
 }
 
 .selectOptionContainer {
@@ -91,58 +41,12 @@
   margin-right: 0;
 }
 
-.noFillColorBox {
-  background: linear-gradient(
-      to top left,
-      rgba(255, 0, 0, 0) 0%,
-      rgba(255, 0, 0, 0) calc(50% - 0.8px),
-      rgba(255, 0, 0, 1) 50%,
-      rgba(255, 0, 0, 0) calc(50% + 0.8px),
-      rgba(255, 0, 0, 0) 100%
-    ),
-    linear-gradient(
-      to top right,
-      rgba(255, 0, 0, 0) 0%,
-      rgba(255, 0, 0, 0) calc(50% - 0.8px),
-      rgba(255, 0, 0, 1) 50%,
-      rgba(255, 0, 0, 0) calc(50% + 0.8px),
-      rgba(255, 0, 0, 0) 100%
-    );
-}
-
-.activeColorBox {
-  border: 1px solid #ccc;
-  box-shadow: 0 0 0 1px #4a47b1;
-}
-
-.colorPicker {
-  margin-right: 20px;
-  width: 40px;
-  height: 40px;
-  border-radius: 6px;
-  border: 2px solid #ccc;
-}
-
-/* Toolbox responsive for mobile */
 @media (max-width: 768px) {
   .container {
-    top: auto;
-    bottom: 60px;
+    width: 80%;
     left: 10px;
-    right: 10px;
-    width: auto;
-    padding: 12px;
-    transform: none;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .selectOptionContainer {
-    margin-bottom: 16px;
-    padding: 0;
-  }
-
-  .colorsContainer {
-    justify-content: space-between;
+    padding: 8px;
+    font-size: 0.75rem;
   }
 
   .colorBox {
@@ -154,5 +58,9 @@
   .colorPicker {
     width: 36px;
     height: 36px;
+  }
+
+  .selectOptionContainer {
+    margin-bottom: 16px;
   }
 }
