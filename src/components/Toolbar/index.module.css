@@ -10,6 +10,7 @@
   border: 1px solid #ccc;
   box-shadow: 1px 0 10px rgba(0, 0, 0, 0.2);
   transform: translateX(-50%);
+  overflow: hidden;
 }
 
 .toolItem {
@@ -41,15 +42,18 @@
 
 @media (max-width: 768px) {
   .container {
-    width: 90%;
-    padding: 8px 10px;
-    transform: translateX(-45%);
+    width: 100%;
+    padding: 8px;
+    transform: translateX(0);
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .toolItem {
     font-size: 1rem;
-    padding: 8px;
-    margin-right: 10px;
+    padding: 6px;
+    margin-right: 8px;
+    flex: 1 1 auto;
   }
 
   .toolItem:last-child {
